@@ -2,18 +2,25 @@ var express = require('express');
 app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!\n');
+	res.send(
+		`<div style={background-color:"green"}>
+			<p style={background-color:"green"}>HAAAII</p>
+		</div>`
+	);
 });
 
 app.get('/:id/', function (req, res) {
-  const id  = req.params.id
-  if(id=="1"){
-    return res.send('Sreyas\n');
-  }
-  return res.send('Samarth\n');
+	const id  = req.params.id
+	if(id=="1"){
+		return res.send('Sreyas\n');
+	} else if(id=="2"){
+		return res.send('Samarth\n');
+	} else {
+		return res.send('No Name\n')
+	}
 });
 
 app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+	console.log('Example app listening on port 8080!');
 });
 
