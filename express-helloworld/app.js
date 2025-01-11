@@ -3,8 +3,8 @@ app = express();
 
 app.get('/', function (req, res) {
 	res.send(
-		`<div style={background-color:"green"}>
-			<p style={background-color:"green"}>HAAAII</p>
+		`<div style={"background-color:green;"}>
+			<h1>HELLLLLOOOOOOOOOOO00000000000</h1>
 		</div>`
 	);
 });
